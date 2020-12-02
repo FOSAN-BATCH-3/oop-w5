@@ -13,43 +13,55 @@
 
 class Calculator {
   //write your code here
-  constructor (){
+  constructor (input){ 
+    this.x = input
+    this.y = 0
+    console.log (this.x)
+  }
 
+  add (angka) {
+    this.x += angka
+    return this
+  }
+
+  subtract (angka) {
+   this.x -= angka
+   return this
+  }
+
+  multiply (angka) {
+    this.x *= angka
+    return this
+  }
+
+  divide (angka) {
+    this.x /= angka
+    return this
+    console.log(this.x)
   
   }
 
-  add () {
-  
-  }
-
-  subtract () {
-   
-  }
-
-  multiply () {
-
-  }
-
-  divide () {
-  
-  }
-
-  square () {
-   
+  square (angka) {
+   this.x **= angka
+   return this
   }
   
   squareRoot () {
- 
+    Math.sqrt(this.x)
+    return this
   }
 
   phi (){
-
+    this.x *= 3.14
+    return this
   }
 
   result(){
-  
-    
+  this.y = this.x
+  this.x = 0 
+  return this.y
   }
+  
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -58,10 +70,11 @@ class Calculator {
 * - Destructured Assignment
 * - Template Literals
 * - Method Chaining
+
 */
 
 const hitung = new Calculator(0)
 
-console.log(hitung.add(3).divide(3).multiply(10).result()) //10
-console.log(hitung.add(3).divide(3).phi().result()) //3.14
-console.log(hitung.add(3).divide(3).squareRoot().result()) // 1 
+console.log(hitung.add(3).divide(3).multiply(10).result());//10
+console.log(hitung.add(3).divide(3).phi().result()); //3.14
+console.log(hitung.add(3).divide(3).squareRoot().result()); // 1 
