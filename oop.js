@@ -13,41 +13,52 @@
 
 class Calculator {
   //write your code here
-  constructor (){
-
+  constructor (nilai){
+    this.total = nilai;
   
   }
-
-  add () {
-  
+// penjumlahan
+  add (tampung) {
+    this.total += tampung;
+    return this;
+  }
+// pengurangan
+  subtract (tampung) {
+   this.total -= tampung;
+   return this;
+  }
+// perkalian
+  multiply (tampung) {
+   this.total *= tampung;
+   return this;
+  }
+// pembagian
+  divide (tampung) {
+  this.total /= tampung;
+  return this;
+  }
+//pangkat
+  square (tampung) {
+   this.total **= tampung;
+   return this;
+  }
+//akar
+  squareRoot (tampung) {
+  this.total =Math.sqrt (this.total)
+  return this;
   }
 
-  subtract () {
-   
-  }
-
-  multiply () {
-
-  }
-
-  divide () {
-  
-  }
-
-  square () {
-   
-  }
-  
-  squareRoot () {
- 
-  }
-
+//phi
   phi (){
+    this.total *=3.14 ;
+    return this;
 
   }
 
   result(){
-  
+  let hasil = this.total;
+  this.total = 0;
+  return hasil;
     
   }
 }
