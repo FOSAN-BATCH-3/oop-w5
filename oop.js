@@ -14,41 +14,51 @@
 class Calculator {
   //write your code here
   constructor (){
-
+    this.angka = 0;
   
   }
 
-  add () {
-  
+  add (jumlah) {
+    this.angka += jumlah
+    return this
   }
 
-  subtract () {
-   
+  subtract (jumlah) {
+    this.angka -= jumlah
+    return this
   }
 
-  multiply () {
-
+  multiply (jumlah) {
+    this.angka *= jumlah
+    return this
   }
 
-  divide () {
-  
+  divide (jumlah) {
+    this.angka /= jumlah
+    return this
   }
 
-  square () {
-   
+  square (jumlah) {
+    this.angka **= jumlah
+    return this
   }
   
   squareRoot () {
- 
+    this.angka = Math.sqrt(this.angka)
+    return this
   }
 
   phi (){
-
+    this.angka = (this.angka * Math.PI).toFixed(2)
+    return this
   }
 
   result(){
-  
+    return this.angka
     
+  }
+  clear(){
+    return this.angka = 0;
   }
 }
 
@@ -63,5 +73,7 @@ class Calculator {
 const hitung = new Calculator(0)
 
 console.log(hitung.add(3).divide(3).multiply(10).result()) //10
+hitung.clear()
 console.log(hitung.add(3).divide(3).phi().result()) //3.14
+hitung.clear()
 console.log(hitung.add(3).divide(3).squareRoot().result()) // 1 
