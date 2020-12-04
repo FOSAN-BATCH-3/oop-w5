@@ -14,41 +14,51 @@
 class Calculator {
   //write your code here
   constructor (){
-
-  
+  this.jumlah = 0
   }
 
-  add () {
-  
+  add (hitung) {
+
+      this.jumlah += hitung;
+      return this;
+    
+    }
+
+  subtract (hitung) {
+      this.jumlah -= hitung;
+      return this;
   }
 
-  subtract () {
-   
+  multiply (hitung) {
+    this.jumlah *= hitung;
+    return this;
   }
 
-  multiply () {
-
+  divide (hitung) {
+    this.jumlah /= hitung;
+    return this;
   }
 
-  divide () {
-  
-  }
-
-  square () {
-   
+  square (hitung) {
+    this.jumlah **= hitung;
+    return this;
   }
   
   squareRoot () {
- 
+    this.jumlah = Math.sqrt(this.jumlah)
+    return this
   }
 
   phi (){
-
+    this.jumlah = (this.jumlah * Math.PI).toFixed(2)
+    return this
   }
 
   result(){
   
-    
+    let hasil = this.jumlah;
+    this.jumlah = 0;
+    return hasil;  
   }
 }
 
